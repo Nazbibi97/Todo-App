@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-  background-image: url("./assets/Background.jpg");  
+  /* background-image: url("./assets/Background.jpg");   */
   background-size: cover;
   background-repeat: no-repeat;
  text-align: center;
@@ -42,4 +42,10 @@ button{
 -webkit-box-shadow: 9px 25px 30px 0px rgba(128,0,128,0.76);
 -moz-box-shadow: 9px 25px 30px 0px rgba(128,0,128,0.76);
 background: radial-gradient(purple 50% , yellow);
+}
+#eidit{
+    display: none;
+}
+#delet{
+    display: none;
 }
