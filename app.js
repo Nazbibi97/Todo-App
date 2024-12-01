@@ -11,7 +11,8 @@ li.appendChild(liText);
 var editbtn= document.createElement("button");
 var editbtnText = document.createTextNode("Edit");
 editbtn.appendChild(editbtnText);
-editbtn.setAttribute("onclick","adddTask(this)");
+editbtn.setAttribute("onclick", "addTask(this)");
+
 li.appendChild(editbtn)
 
 // delete button
@@ -31,8 +32,11 @@ function delet(){
     ul.innerHTML ="";
 }
 function addTask(editbtn){
-    var oldVal = editbtn.parentNode.firstChild.nodeValue;
-    var newVal = prompt("Edit Task"+ oldVal);
+    var one = editbtn.parentNode.firstChild.nodeValue;
+    var two = prompt("Enter your Task" + one);
+    editbtn.parentNode.firstChild.nodeValue = two
+
+   
 }
 function deleteTask(deleteBtn){
     deleteBtn.parentNode.remove()
@@ -43,21 +47,3 @@ function deleteTask(deleteBtn){
 
 
 
-// function adddTask(){
-//     var li = document.createElement("li");
-// var liText = document.createTextNode(input.value);
-// li.setAttribute("class", "task")
-// li.appendChild(liText);
-// //  /////---- addd btn
-// var addbtn = document.createElement("button");
-// var addbtnText = document.createTextNode("add");
-// addbtn.appendChild(addbtnText);
-// addbtn.setAttribute("onclick", "addTask(this)");
-// li.appendChild(addbtn);
-// // //// delete btn
-// var deleteBtn = document.createElement("button");
-// var delBtnText = document.createTextNode("Delete");
-// deleteBtn.appendChild(delBtnText);
-// deleteBtn.setAttribute("onclick", "deleteTask(this)");
-// li.appendChild(deleteBtn);
-// }
