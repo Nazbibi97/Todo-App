@@ -5,13 +5,18 @@ function add(){
         alert("Please enter your task")
     }else{
 var li = document.createElement("li");
+li.setAttribute("class","addedList")
+
 var liText= document.createTextNode(input.value);
+// liText.setAttribute("class", "value")
 li.appendChild(liText);
+
 // edit button
 var editbtn= document.createElement("button");
 var editbtnText = document.createTextNode("Edit");
 editbtn.appendChild(editbtnText);
 editbtn.setAttribute("onclick", "addTask(this)");
+editbtn.setAttribute("class","edit")
 
 li.appendChild(editbtn)
 
@@ -20,6 +25,7 @@ li.appendChild(editbtn)
 var deleteBtn = document.createElement("button");
 var delBtnText = document.createTextNode("Delete");
 deleteBtn.appendChild(delBtnText);
+deleteBtn.setAttribute("class","dele")
 deleteBtn.setAttribute("onclick", "deleteTask(this)");
 li.appendChild(deleteBtn);
 ul.appendChild(li);
